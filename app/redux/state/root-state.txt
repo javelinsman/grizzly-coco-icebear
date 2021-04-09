@@ -1,0 +1,41 @@
+export interface AppState {
+	route: "main" | "form",
+    	form: {
+		state: "bp" | "bw" | "bs",
+		bp: {
+			sbp: number;
+			dbp: number;
+		},
+		bs: {
+			type: "empty" | "2-hours";
+			value: number;
+		},
+		bw: {
+			value: number;
+		},
+	}
+
+	data: {
+		bs...
+	}
+    }
+}
+
+defaultAppState = {
+	route: "main",
+	form: {
+		bp: null,
+		bs: null,
+		bw: null,
+	}
+}
+
+
+if (route === "form")
+	return <Form />
+
+
+if (form.state === "bp") {
+	
+}
+
