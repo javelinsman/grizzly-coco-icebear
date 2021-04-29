@@ -1,6 +1,5 @@
+import { Box, Button, Grid, Text, TextArea } from 'grommet';
 import React from 'react';
-import logo from './logo.svg';
-import { Box, Grid, Grommet, Text } from 'grommet';
 import MessageBox from './components/MessageBox';
 
 const ChatTitle: React.FC = ({ children }) => (
@@ -18,7 +17,7 @@ const Dialog: React.FC = ({ children }) => (
 
 function App() {
   return (
-    <Grid fill={true} rows={["auto", "1fr"]}>
+    <Grid fill={true} rows={["auto", "1fr", "auto"]}>
       <ChatTitle>증상 문의하기</ChatTitle>
       <Dialog>
         {new Array(20).fill(0).map(_ => (
@@ -28,6 +27,10 @@ function App() {
           </>
         ))}
       </Dialog>
+      <Grid columns={["1fr", "auto"]}>
+        <TextArea />
+        <Button plain label="전송" style={{ backgroundColor: "rgb(88, 86, 86)", color: "white", width: "50px", textAlign: "center"}} />
+      </Grid>
     </Grid>
   );
 }
