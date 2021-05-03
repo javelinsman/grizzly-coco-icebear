@@ -1,5 +1,6 @@
 import { createAction } from "typesafe-actions";
-import { loadDialogs } from "./api";
+import { Dialog } from "../state/dialog-state";
+import { loadDialogs, postUserAction } from "./api";
 import { makeThunk } from "./utils";
 // import { getQuery, getRecentIssueQueries, postQuery } from "./api/api";
 
@@ -14,6 +15,14 @@ const thunkActions = {
     () => ({
       request: { },
       response: () => loadDialogs(),
+    })
+  ),
+  next: makeThunk(
+    "QUERY/NEXT/fetch",
+    "QUERY/NEXT/complete",
+    (state: Dialog[], action: string) => ({
+      request: { state, action },
+      response: () => postUserAction(state, action),
     })
   ),
 };

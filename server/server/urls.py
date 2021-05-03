@@ -17,12 +17,14 @@ from django.contrib import admin
 from django.urls import path, include
 from rest_framework import routers
 from obgy.views import ObgyViewSet, BloodPressureViewSet, BodyWeightViewSet, BloodSugarViewSet
+from chatbot.views import ChatbotViewSet
 
 router = routers.DefaultRouter()
 router.register('obgy', ObgyViewSet, basename='obgy')
 router.register('bp', BloodPressureViewSet)
 router.register('bw', BodyWeightViewSet)
 router.register('bs', BloodSugarViewSet)
+router.register('chatbot', ChatbotViewSet, basename='chatbot')
 
 urlpatterns = [
     path('', include(router.urls)),

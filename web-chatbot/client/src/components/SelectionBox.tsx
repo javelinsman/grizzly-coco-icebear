@@ -1,5 +1,6 @@
 import { Box, Button, Text } from "grommet";
 import React, { useState } from "react";
+import { useThunkDispatch } from "../redux/action/root-action";
 
 interface Props {
   type: "self" | "other";
@@ -8,6 +9,7 @@ interface Props {
   options: string[];
   selected: string | null;
   active: boolean;
+  onSelectOption: (option: string) => any;
 }
 
 const SelectionBox: React.FC<Props> = ({
@@ -17,6 +19,7 @@ const SelectionBox: React.FC<Props> = ({
   options,
   selected,
   active,
+  onSelectOption,
 }) => {
   const [tempSelected, setTempSelected] = useState(selected || null);
 
@@ -40,8 +43,9 @@ const SelectionBox: React.FC<Props> = ({
         }}
       >
         <Text style={{ wordBreak: "break-word" }}  margin={{ bottom: "10px" }}>{message}</Text>
-        {options.map((option) => (
+        {options.map((option, i) => (
           <Button
+            key={i}
             label={option}
             primary={option === tempSelected}
             margin={{ vertical: "5px" }}
@@ -55,6 +59,11 @@ const SelectionBox: React.FC<Props> = ({
               pad={{ horizontal: "medium", vertical: "small" }}
               background="brand"
               style={{ color: "white" }}
+              onClick={() => {
+                if (tempSelected) {
+                  onSelectOption(tempSelected);
+                }
+              }}
             >
               <Text alignSelf="center">응답 제출</Text>
             </Box>

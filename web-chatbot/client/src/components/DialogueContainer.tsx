@@ -29,10 +29,10 @@ const DialogueContainer: React.FC<Props> = () => {
   }
   return (
     <Container>
-      {dialogs.map((dialog) => {
+      {dialogs.map((dialog, i) => {
         if (dialog.type === "message") {
           const { authorType: type, nick, message } = dialog;
-          return <MessageBox type={type} nick={nick} message={message} />;
+          return <MessageBox key={i} type={type} nick={nick} message={message} />;
         } else if (dialog.type === "selection") {
           const {
             authorType: type,
@@ -44,12 +44,16 @@ const DialogueContainer: React.FC<Props> = () => {
           } = dialog;
           return (
             <SelectionBox
+              key={i}
               type={type}
               nick={nick}
               message={message}
               options={options}
               selected={selected}
               active={active}
+              onSelectOption={(option: string) => {
+                dispatch(actionDialog.next.thunk(dialogs, option))
+              }}
             />
           );
         }

@@ -19,6 +19,11 @@ export const dialogReducer = (
       const dialogs = action.payload;
       return { ...state, fetching: "done", dialogs }
     }
+    // case getType(actionDialog.next.fetch):
+    case getType(actionDialog.next.complete): {
+      const dialogs = action.payload;
+      return { ...state, dialogs }
+    }
     default:
       return state;
   }
