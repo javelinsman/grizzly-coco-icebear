@@ -39,4 +39,93 @@ DISCHARGE_STATUS = {
     ],
 }
 
+MOVEMENT_FIRST = {
+    **selection_base,
+    "id": "movement-first",
+    "message": "아래 횟수에 체크하세요.",
+    "options": [
+        {"id": 'MF1', "value": "20분 동안 1회 작은 움직임이 감지되었다"},
+        {"id": "MF2", "value": "20분 동안 1회의 작은 움직임도 없었다"},
+    ],
+}
 
+MOVEMENT_SECOND = {
+    **selection_base,
+    "id": "movement-second",
+    "message": "자세를 바꾸거나 걸어본 후에 다시 20분동안 확인해보세요. 움직임이 1회라도 느껴졌나요?",
+    "options": [
+        {"id": "MS1", "value": "네, 느껴졌습니다."},
+        {"id": 'MS2', "value": "아니요, 느껴지지 않았습니다."},
+    ],
+}
+
+CONTRACTION_PART = {
+    **selection_base,
+    "id": "contraction-part",
+    "message": "아래 통증의 부위에 체크하세요.",
+    "options": [
+        {"id": 'CPlower', "value": "아랫배"},
+        {"id": "CPleft", "value": "왼쪽배"},
+        {"id": "CPright", "value": "오른쪽배"},
+        {"id": "CPupper", "value": "윗배"},
+    ],
+}
+
+CONTRACTION_INTENSITY = {
+    **selection_base,
+    "id": "contraction-intensity",
+    "message": "아래 강도에 체크하세요.",
+    "options": [
+        {"id": "CI1", "value": "약간 뻐근한 정도"},
+        {"id": "CI2", "value": "콕콕 찌르는 양상"},
+        {"id": "CI3", "value": "생리통과 같은 정도"},
+        {"id": "CI4", "value": "쥐어짜듯이 아픔"},
+        {"id": "CI5", "value": "허리를 못 펼 정도의 아픔"},
+        {"id": "CI6", "value": "허리통증"},
+    ],
+}
+
+CONTRACTION_CONSTIPATION = {
+    **selection_base,
+    "id": "contraction-constipation",
+    "message": "지금 변비가 있나요?",
+    "options": [
+        {"id": "CCyes", "value": "네"},
+        {"id": "CCno", "value": "아니요"},
+    ],
+}
+
+
+CONTRACTION_FREQUENCY_FIRST = {
+    **selection_base,
+    "id": "contraction-frequency-first",
+    "message": "주기적으로 반복되는지 확인해보세요. 아래 횟수에 체크하세요.",
+    "options": [
+        {"id": "CFF1", "value": "30분에 4회 이하"},
+        {"id": "CFF2", "value": "30분에 5회 이상"},
+    ],
+}
+
+CONTRACTION_FREQUENCY_SECOND = {
+    **selection_base,
+    "id": "contraction-frequency-second",
+    "message": "다시 30분을 확인하세요. 이번에도 5회 이상 느껴졌나요?",
+    "options": [
+        {"id": "CFS1", "value": "네, 느껴졌습니다."},
+        {"id": "CFS2", "value": "아니요, 4회 이하로 느껴졌습니다."},
+    ],
+}
+
+MORNING_STATUS = {
+    **selection_base,
+    "id": "morning-status",
+    "message": "아래 양상에 체크하세요.",
+    "options": [
+        {"id": "MNS1", "value": "약간 메스껍다"},
+        {"id": "MNS2", "value": "구역질을 한다"},
+        {"id": "MNS3", "value": "계속 토한다"},
+        {"id": "MNS4", "value": "전혀 먹지 못한다"},
+        {"id": "MNS5", "value": "소변량이 줄었다"},
+        {"id": "MNS6", "value": "어지럽다"},
+    ],
+}

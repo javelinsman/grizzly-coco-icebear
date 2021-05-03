@@ -23,8 +23,8 @@ class ChatbotViewSet(viewsets.ViewSet):
                     "options": [
                         {"id": "bleeding", "value": "질출혈"},
                         {"id": "discharge", "value": "질분비물"},
-                        {"id": "fetal-movement", "value": "태동 감소"},
-                        {"id": "ut-cont", "value": "자궁수축 / 복통"},
+                        {"id": "movement", "value": "태동 감소"},
+                        {"id": "contraction", "value": "자궁수축 / 복통"},
                         {"id": "morning", "value": "입덧"},
                     ],
                     "selected": None,
