@@ -39,7 +39,7 @@ const SelectionBox: React.FC<Props> = ({
           borderRadius: "3px",
         }}
       >
-        <Text margin={{ bottom: "10px" }}>{message}</Text>
+        <Text style={{ wordBreak: "break-word" }}  margin={{ bottom: "10px" }}>{message}</Text>
         {options.map((option) => (
           <Button
             label={option}
