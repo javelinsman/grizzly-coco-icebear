@@ -10,7 +10,7 @@ export async function loadDialogs() {
   return r.data;
 }
 
-export async function postUserAction(state: Dialog[], action: string) {
+export async function postUserAction(state: Dialog[], action: {id: string, value: string}) {
   const r = await Axios.post<Dialog[]>(baseUrl + `chatbot/next/`, { state, action });
   return r.data;
 }

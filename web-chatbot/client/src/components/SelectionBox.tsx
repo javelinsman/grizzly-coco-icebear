@@ -6,10 +6,10 @@ interface Props {
   type: "self" | "other";
   nick: string;
   message: string;
-  options: string[];
+  options: { id: string; value: string }[];
   selected: string | null;
   active: boolean;
-  onSelectOption: (option: string) => any;
+  onSelectOption: (option: { id: string; value: string }) => any;
 }
 
 const SelectionBox: React.FC<Props> = ({
@@ -42,14 +42,16 @@ const SelectionBox: React.FC<Props> = ({
           borderRadius: "3px",
         }}
       >
-        <Text style={{ wordBreak: "break-word" }}  margin={{ bottom: "10px" }}>{message}</Text>
+        <Text style={{ wordBreak: "break-word" }} margin={{ bottom: "10px" }}>
+          {message}
+        </Text>
         {options.map((option, i) => (
           <Button
             key={i}
-            label={option}
-            primary={option === tempSelected}
+            label={option.value}
+            primary={option.id === tempSelected}
             margin={{ vertical: "5px" }}
-            onClick={() => active && setTempSelected(option)}
+            onClick={() => active && setTempSelected(option.id)}
           />
         ))}
         {active && (
@@ -61,7 +63,10 @@ const SelectionBox: React.FC<Props> = ({
               style={{ color: "white" }}
               onClick={() => {
                 if (tempSelected) {
-                  onSelectOption(tempSelected);
+                  const option = options.find((o) => o.id === tempSelected);
+                  if (option) {
+                    onSelectOption(option);
+                  }
                 }
               }}
             >

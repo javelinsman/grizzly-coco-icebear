@@ -1,4 +1,5 @@
 export interface MessageDialog {
+  id: string;
   type: "message";
   authorType: "self" | "other";
   nick: string;
@@ -6,11 +7,12 @@ export interface MessageDialog {
 }
 
 export interface SelectionDialog {
+  id: string;
   type: "selection";
   authorType: "self" | "other";
   nick: string;
   message: string;
-  options: string[];
+  options: {id: string, value: string}[];
   selected: string;
   active: boolean;
 }

@@ -20,7 +20,7 @@ const thunkActions = {
   next: makeThunk(
     "QUERY/NEXT/fetch",
     "QUERY/NEXT/complete",
-    (state: Dialog[], action: string) => ({
+    (state: Dialog[], action: {id: string, value: string}) => ({
       request: { state, action },
       response: () => postUserAction(state, action),
     })
