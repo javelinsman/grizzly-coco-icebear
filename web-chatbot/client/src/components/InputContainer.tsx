@@ -50,7 +50,7 @@ const InputContainer: React.FC<Props> = () => {
           dispatch(
             actionDialog.next.thunk(dialogs, {
               id: "init",
-              value: "",
+              value: "문의 시작하기",
             })
           );
         }}
