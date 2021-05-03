@@ -27,7 +27,7 @@ const MessageBox: React.FC<Props> = ({ type, nick, message }) => {
           borderRadius: "3px",
         }}
       >
-        <Text style={{ wordBreak: "break-word"}}>{message}</Text>
+        <Text style={{ wordBreak: "break-word", whiteSpace: "pre-wrap"}}>{message}</Text>
       </Box>
     </Box>
   );

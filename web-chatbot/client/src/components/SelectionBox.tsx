@@ -55,7 +55,7 @@ const SelectionBox: React.FC<Props> = ({
           />
         ))}
         {active && (
-          <Button hoverIndicator={false}>
+          <Button hoverIndicator={false} disabled={!tempSelected}>
             <Box
               margin={{ top: "small" }}
               pad={{ horizontal: "medium", vertical: "small" }}
