@@ -1,5 +1,5 @@
 message_base = {"type": "message", "authorType": "other", "nick": "알러뷰봇"}
-selection_base = {"type": "selection", "authorType": "other", "nick": "알러뷰봇"}
+selection_base = {"type": "selection", "authorType": "other", "nick": "알러뷰봇", "selected": None, "active": True}
 
 BLEEDING_AMOUNT = {
     **selection_base,
@@ -12,8 +12,18 @@ BLEEDING_AMOUNT = {
         {"id": "BA4", "value": "속옷이나 패드를 흠뻑 적실만큼"},
         {"id": "BA5", "value": "계속 흐르는 질출혈"},
     ],
-    "selected": None,
-    "active": True,
+}
+
+BLEEDING_COLOR = {
+    **selection_base,
+    "id": "bleeding-color",
+    "message": "아래 출혈색깔에 체크하세요.",
+    "options": [
+        {"id": 'BC1', "value": "옅은 갈색"},
+        {"id": "BC2", "value": "갈색"},
+        {"id": "BC3", "value": "핑크색"},
+        {"id": "BC4", "value": "빨간색"},
+    ],
 }
 
 DISCHARGE_STATUS = {
@@ -27,8 +37,6 @@ DISCHARGE_STATUS = {
         {"id": "DS4", "value": "물처럼 계속 흐른다"},
         {"id": "DS5", "value": "하얀 덩어리가 나온다"},
     ],
-    "selected": None,
-    "active": True,
 }
 
 
