@@ -6,6 +6,7 @@ import { DialogState } from "../state/dialog-state";
 const defaultDialogState: DialogState = {
   dialogs: [],
   fetching: "none",
+  input: "freeform",
 };
 
 export const dialogReducer = (
@@ -16,13 +17,13 @@ export const dialogReducer = (
     case getType(actionDialog.load.fetch):
       return { ...state, fetching: "fetching" };
     case getType(actionDialog.load.complete): {
-      const dialogs = action.payload;
-      return { ...state, fetching: "done", dialogs }
+      const { dialogs, input } = action.payload;
+      return { ...state, dialogs, input, fetching: "done" };
     }
     // case getType(actionDialog.next.fetch):
     case getType(actionDialog.next.complete): {
-      const dialogs = action.payload;
-      return { ...state, dialogs }
+      const { dialogs, input } = action.payload;
+      return { ...state, dialogs, input };
     }
     default:
       return state;

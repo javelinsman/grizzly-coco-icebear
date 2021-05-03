@@ -1,4 +1,5 @@
 from .constants import (
+    INIT_QUESTION,
     BLEEDING_AMOUNT,
     DISCHARGE_STATUS,
     BLEEDING_COLOR,
@@ -10,6 +11,8 @@ from .constants import (
     CONTRACTION_FREQUENCY_SECOND,
     CONTRACTION_CONSTIPATION,
     MORNING_STATUS,
+    ENDING,
+    ENDING_FREEFORM,
 )
 
 
@@ -30,8 +33,17 @@ def deactivate_question(question, action):
 
 
 def next_bot_response(state, action, context):
-    message_base = {"type": "message", "authorType": "other", "nick": "알러뷰봇"}
+    message_base = {
+        "type": "message",
+        "id": "msg",
+        "authorType": "other",
+        "nick": "알러뷰봇",
+    }
     selection_base = {"type": "selection", "authorType": "other", "nick": "알러뷰봇"}
+
+    # Init
+    if action["id"] == "init":
+        return INIT_QUESTION
 
     # Bleeding
     if state["id"] == "init-question" and action["id"] == "bleeding":
@@ -39,12 +51,8 @@ def next_bot_response(state, action, context):
     if state["id"] == "bleeding-amount":
         return BLEEDING_COLOR
     if state["id"] == "bleeding-color":
-        print(context)
         amount = context[-2]["selected"]["id"]
         color = action["id"]
-
-        print(amount, color)
-
         if amount == "BA5":
             return {**message_base, "message": "분만장으로 빨리 내원하세요."}
         elif color == "BC4" or amount in ("BA4", "BA5"):
@@ -88,13 +96,19 @@ def next_bot_response(state, action, context):
     if state["id"] == "init-question" and action["id"] == "contraction":
         return CONTRACTION_PART
     if state["id"] == "contraction-part" and action["id"] in ("CPupper",):
-        return {**message_base, "message": "체하거나 소화와 관련된 증상일 수 있습니다. 임신중독증에서는 간기능이상으로 인한 것이기도 합니다. 분만장으로 문의하세요."}
+        return {
+            **message_base,
+            "message": "체하거나 소화와 관련된 증상일 수 있습니다. 임신중독증에서는 간기능이상으로 인한 것이기도 합니다. 분만장으로 문의하세요.",
+        }
     if state["id"] == "contraction-part" and action["id"] in ("CPlower", "CPright"):
         return CONTRACTION_INTENSITY
     if state["id"] == "contraction-part" and action["id"] in ("CPleft",):
         return CONTRACTION_CONSTIPATION
     if state["id"] == "contraction-constipation" and action["id"] == "CCyes":
-        return {**message_base, "message": "체하거나 소화와 관련된 증상일 수 있습니다. 임신중독증에서는 간기능이상으로 인한 것이기도 합니다. 분만장으로 문의하세요."}
+        return {
+            **message_base,
+            "message": "체하거나 소화와 관련된 증상일 수 있습니다. 임신중독증에서는 간기능이상으로 인한 것이기도 합니다. 분만장으로 문의하세요.",
+        }
     if state["id"] == "contraction-constipation" and action["id"] == "CCno":
         return CONTRACTION_INTENSITY
     if state["id"] == "contraction-intensity" and action["id"] in ("CI1", "CI2"):
@@ -117,8 +131,21 @@ def next_bot_response(state, action, context):
         return MORNING_STATUS
     if state["id"] == "morning-status" and action["id"] in ("MNS1", "MNS2"):
         return {**message_base, "message": "차가운 음료나 자극적이지 않은 음식 위주로 식사를 시도하세요."}
-    if state["id"] == "morning-status" and action["id"] in ("MNS3", "MNS4", "MNS5", "MNS6"):
+    if state["id"] == "morning-status" and action["id"] in (
+        "MNS3",
+        "MNS4",
+        "MNS5",
+        "MNS6",
+    ):
         return {**message_base, "message": "산부인과 진료 예약을 당겨서 내원하세요."}
+
+    # Ending
+    if state["id"] == "ending" and action["id"] == "EDfreeform":
+        return ENDING_FREEFORM
+    if state["id"] == "ending" and action["id"] == "EDquit":
+        return {**message_base, "id": "terminate", "message": "땡큐"}
+    if state["id"] == "ending-freeform" and action["id"] == "freeform-answer":
+        return {**message_base, "id": "terminate", "message": "땡큐"}
 
     return {**message_base, "message": "오류가 발생했습니다."}
 
@@ -127,15 +154,30 @@ def reducer(dialogs, action):
     context = context_from_dialogs(dialogs)
     state = state_from_dialogs(dialogs)
 
-    if state["type"] == "selection":
-        return [
-            *context,
-            deactivate_question(state, action),
-            {
-                "type": "message",
-                "authorType": "self",
-                "nick": "회원님",
-                "message": action["value"],
-            },
-            next_bot_response(state, action, context),
-        ]
+    next_response = next_bot_response(state, action, context)
+
+    next_dialogs = [
+        *context,
+        deactivate_question(state, action),
+        {
+            "type": "message",
+            "authorType": "self",
+            "nick": "회원님",
+            "message": action["value"],
+        },
+        next_response,
+    ]
+    if next_response["type"] == "message" and next_response["id"] != "terminate":
+        next_dialogs.append(ENDING)
+
+    if next_response["id"] == "terminate":
+        next_input = "init"
+    elif next_response["id"] == "ending-freeform":
+        next_input = "freeform"
+    else:
+        next_input = "disable"
+
+    return {
+        "dialogs": next_dialogs,
+        "input": next_input,
+    }

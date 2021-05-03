@@ -21,5 +21,6 @@ export type Dialog = MessageDialog | SelectionDialog;
 
 export interface DialogState {
   dialogs: Dialog[];
+  input: "init" | "disable" | "freeform";
   fetching: "none" | "fetching" | "done";
 }

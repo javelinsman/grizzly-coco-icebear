@@ -6,12 +6,12 @@ import { Dialog } from "../state/dialog-state";
 const baseUrl = "http://147.46.241.199:8116/";
 
 export async function loadDialogs() {
-  const r = await Axios.get<Dialog[]>(baseUrl + `chatbot/load/`);
+  const r = await Axios.get<{dialogs: Dialog[], input: any}>(baseUrl + `chatbot/load/`);
   return r.data;
 }
 
 export async function postUserAction(state: Dialog[], action: {id: string, value: string}) {
-  const r = await Axios.post<Dialog[]>(baseUrl + `chatbot/next/`, { state, action });
+  const r = await Axios.post<{dialogs: Dialog[], input: any}>(baseUrl + `chatbot/next/`, { state, action });
   return r.data;
 }
 

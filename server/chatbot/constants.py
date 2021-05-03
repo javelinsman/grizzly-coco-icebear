@@ -1,6 +1,26 @@
 message_base = {"type": "message", "authorType": "other", "nick": "알러뷰봇"}
 selection_base = {"type": "selection", "authorType": "other", "nick": "알러뷰봇", "selected": None, "active": True}
 
+INIT = {
+    **message_base,
+    "id": "init",
+    "message": "안녕하세요. 질문이 있으시면 아래 \"문의 시작하기\" 버튼을 눌러주세요.",
+}
+
+
+INIT_QUESTION = {
+    **selection_base,
+    "id": "init-question",
+    "message": "어디가 불편하신가요?",
+    "options": [
+        {"id": "bleeding", "value": "질출혈"},
+        {"id": "discharge", "value": "질분비물"},
+        {"id": "movement", "value": "태동 감소"},
+        {"id": "contraction", "value": "자궁수축 / 복통"},
+        {"id": "morning", "value": "입덧"},
+    ],
+}
+
 BLEEDING_AMOUNT = {
     **selection_base,
     "id": "bleeding-amount",
@@ -128,4 +148,22 @@ MORNING_STATUS = {
         {"id": "MNS5", "value": "소변량이 줄었다"},
         {"id": "MNS6", "value": "어지럽다"},
     ],
+}
+
+ENDING = {
+    **selection_base,
+    "id": "ending",
+    "message": "질문이 충분히 해결되지 않았다면 더 자세한 정황을 적어주세요. 해당 데이터는 추후 외래 진료할 때 의사 선생님께 보여드릴 수 있습니다.",
+    "options": [
+        {"id": "EDfreeform", "value": "네, 더 자세히 기록하고 싶어요."},
+        {"id": "EDquit", "value": "아니요, 충분합니다."},
+    ],
+}
+
+ENDING_FREEFORM = {
+    **selection_base,
+    "id": "ending-freeform",
+    "message": "적어주세요.",
+    "options": [],
+    "active": False,
 }
