@@ -1,5 +1,5 @@
 import { Box } from "grommet";
-import React from "react";
+import React, { createRef, useLayoutEffect, useRef } from "react";
 import MessageBox from "./MessageBox";
 import SelectionBox from "./SelectionBox";
 import { useRootSelector } from "../redux/state/root-state";
@@ -23,6 +23,22 @@ const DialogueContainer: React.FC<Props> = () => {
   const dialogs = useRootSelector((state) => state.dialogs.dialogs);
   const fetching = useRootSelector((state) => state.dialogs.fetching);
   const dispatch = useThunkDispatch();
+
+  const refs = useRef([]);
+  if (refs.current.length !== dialogs.length) {
+    refs.current = new Array(dialogs.length).fill(0).map((_, i) => refs.current[i] || createRef());
+  }
+  useLayoutEffect(() => {
+    console.log({ refs })
+    if (refs && refs.current) {
+      const ref = refs.current[refs.current.length - 1] as any
+      console.log({ refs, ref })
+      if (ref && ref.current) {
+        ref.current.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+  }, [dialogs])
+
   if (fetching === "none") {
     dispatch(actionDialog.load.thunk());
     return <Container />;
@@ -33,7 +49,9 @@ const DialogueContainer: React.FC<Props> = () => {
         if (dialog.type === "message") {
           const { authorType: type, nick, message } = dialog;
           return (
-            <MessageBox key={i} type={type} nick={nick} message={message} />
+            <div ref={refs.current[i]}>
+              <MessageBox key={i} type={type} nick={nick} message={message} />
+            </div>
           );
         } else if (dialog.type === "selection") {
           const {
@@ -45,6 +63,9 @@ const DialogueContainer: React.FC<Props> = () => {
             active,
           } = dialog;
           return (
+            <div
+              ref={refs.current[i]}
+            >
             <SelectionBox
               key={i}
               type={type}
@@ -59,6 +80,7 @@ const DialogueContainer: React.FC<Props> = () => {
                 );
               }}
             />
+            </div>
           );
         }
       })}
