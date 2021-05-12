@@ -12,17 +12,21 @@ const thunkActions = {
   load: makeThunk(
     "QUERY/LOAD/fetch",
     "QUERY/LOAD/complete",
-    () => ({
-      request: { },
-      response: () => loadDialogs(),
+    (encryptedPk: string) => ({
+      request: { encryptedPk },
+      response: () => loadDialogs(encryptedPk),
     })
   ),
   next: makeThunk(
     "QUERY/NEXT/fetch",
     "QUERY/NEXT/complete",
-    (state: Dialog[], action: {id: string, value: string}) => ({
-      request: { state, action },
-      response: () => postUserAction(state, action),
+    (
+      encryptedPk: string,
+      state: Dialog[],
+      action: { id: string; value: string }
+    ) => ({
+      request: { encryptedPk, state, action },
+      response: () => postUserAction(encryptedPk, state, action),
     })
   ),
 };

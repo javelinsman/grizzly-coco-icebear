@@ -7,6 +7,7 @@ import { useRootSelector } from "../redux/state/root-state";
 interface Props {}
 
 const InputContainer: React.FC<Props> = () => {
+  const encryptedPk = useRootSelector((state) => state.auth.encryptedPk);
   const inputState = useRootSelector((state) => state.dialogs.input);
   const dialogs = useRootSelector((state) => state.dialogs.dialogs);
   const dispatch = useThunkDispatch();
@@ -26,7 +27,7 @@ const InputContainer: React.FC<Props> = () => {
           }}
           onClick={() => {
             dispatch(
-              actionDialog.next.thunk(dialogs, {
+              actionDialog.next.thunk(encryptedPk, dialogs, {
                 id: "freeform-answer",
                 value: text,
               })
@@ -48,7 +49,7 @@ const InputContainer: React.FC<Props> = () => {
         }}
         onClick={() => {
           dispatch(
-            actionDialog.next.thunk(dialogs, {
+            actionDialog.next.thunk(encryptedPk, dialogs, {
               id: "init",
               value: "문의 시작하기",
             })

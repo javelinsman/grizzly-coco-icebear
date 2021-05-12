@@ -22,25 +22,28 @@ interface Props {}
 const DialogueContainer: React.FC<Props> = () => {
   const dialogs = useRootSelector((state) => state.dialogs.dialogs);
   const fetching = useRootSelector((state) => state.dialogs.fetching);
+  const encryptedPk = useRootSelector((state) => state.auth.encryptedPk);
   const dispatch = useThunkDispatch();
 
   const refs = useRef([]);
   if (refs.current.length !== dialogs.length) {
-    refs.current = new Array(dialogs.length).fill(0).map((_, i) => refs.current[i] || createRef());
+    refs.current = new Array(dialogs.length)
+      .fill(0)
+      .map((_, i) => refs.current[i] || createRef());
   }
   useLayoutEffect(() => {
-    console.log({ refs })
+    console.log({ refs });
     if (refs && refs.current) {
-      const ref = refs.current[refs.current.length - 1] as any
-      console.log({ refs, ref })
+      const ref = refs.current[refs.current.length - 1] as any;
+      console.log({ refs, ref });
       if (ref && ref.current) {
-        ref.current.scrollIntoView({ behavior: 'smooth' });
+        ref.current.scrollIntoView({ behavior: "smooth" });
       }
     }
-  }, [dialogs])
+  }, [dialogs]);
 
   if (fetching === "none") {
-    dispatch(actionDialog.load.thunk());
+    dispatch(actionDialog.load.thunk(encryptedPk));
     return <Container />;
   }
   return (
@@ -63,23 +66,19 @@ const DialogueContainer: React.FC<Props> = () => {
             active,
           } = dialog;
           return (
-            <div
-              ref={refs.current[i]}
-            >
-            <SelectionBox
-              key={i}
-              type={type}
-              nick={nick}
-              message={message}
-              options={options}
-              selected={selected}
-              active={active}
-              onSelectOption={(option) => {
-                dispatch(
-                  actionDialog.next.thunk(dialogs, option)
-                );
-              }}
-            />
+            <div ref={refs.current[i]}>
+              <SelectionBox
+                key={i}
+                type={type}
+                nick={nick}
+                message={message}
+                options={options}
+                selected={selected}
+                active={active}
+                onSelectOption={(option) => {
+                  dispatch(actionDialog.next.thunk(encryptedPk, dialogs, option));
+                }}
+              />
             </div>
           );
         }

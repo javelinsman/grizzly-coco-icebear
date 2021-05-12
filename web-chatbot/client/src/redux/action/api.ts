@@ -5,13 +5,22 @@ import { Dialog } from "../state/dialog-state";
 
 const baseUrl = "http://147.46.241.199:8116/";
 
-export async function loadDialogs() {
-  const r = await Axios.get<{dialogs: Dialog[], input: any}>(baseUrl + `chatbot/load/`);
+export async function loadDialogs(encryptedPk: string) {
+  const r = await Axios.get<{ dialogs: Dialog[]; input: any }>(
+    baseUrl + `chatbot/load?encryptedPk=${encryptedPk}`
+  );
   return r.data;
 }
 
-export async function postUserAction(state: Dialog[], action: {id: string, value: string}) {
-  const r = await Axios.post<{dialogs: Dialog[], input: any}>(baseUrl + `chatbot/next/`, { state, action });
+export async function postUserAction(
+  encryptedPk: string,
+  state: Dialog[],
+  action: { id: string; value: string }
+) {
+  const r = await Axios.post<{ dialogs: Dialog[]; input: any }>(
+    baseUrl + `chatbot/next/`,
+    { encryptedPk, state, action }
+  );
   return r.data;
 }
 

@@ -41,7 +41,7 @@ def deactivate_question(question, action):
     return (
         question
         if question["type"] == "message"
-        else {**question, "selected": action, "active": False}
+        else {**question, "selected": action["id"], "active": False}
     )
 
 
@@ -183,6 +183,8 @@ def reducer(dialogs, action):
         next_input = "freeform"
     else:
         next_input = "disable"
+
+    print(next_dialogs)
 
     return {
         "dialogs": next_dialogs,

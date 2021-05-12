@@ -3,7 +3,10 @@ import { makeThunk } from "./utils";
 // import { getQuery, getRecentIssueQueries, postQuery } from "./api/api";
 
 const unitActions = {
-  fetchEncryptedPK: createAction("AUTH/FETCH_ENCRYPTED_PK", () => {})(),
+  setEncryptedPK: createAction(
+    "AUTH/SET_ENCRYPTED_PK",
+    (encryptedPk: string) => ({ encryptedPk })
+  )(),
 };
 
 const thunkActions = {
