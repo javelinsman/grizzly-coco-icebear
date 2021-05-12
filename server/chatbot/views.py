@@ -22,7 +22,7 @@ class ChatbotViewSet(viewsets.ViewSet):
         }
 
         if encrypted_pk == "anonymous":
-            return init_state
+            return Response(init_state)
 
         if not ChatbotState.objects.filter(encrypted_pk=encrypted_pk).exists():
             ChatbotState.objects.create(encrypted_pk=encrypted_pk, state=init_state)
