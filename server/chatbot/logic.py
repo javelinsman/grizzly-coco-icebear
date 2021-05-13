@@ -70,7 +70,7 @@ def next_bot_response(state, action, context):
     if state["id"] == "bleeding-amount":
         return BLEEDING_COLOR
     if state["id"] == "bleeding-color":
-        amount = context[-2]["selected"]["id"]
+        amount = context[-2]["selected"]
         color = action["id"]
         if amount == "BA5":
             return VISIT_DU_ASAP
