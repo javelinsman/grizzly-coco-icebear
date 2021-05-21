@@ -17,8 +17,8 @@ const GlobalTimeline: React.FC<Props> = ({entries}) =>{
     
     return (
         <svg>
-            
-        </svg>>
+
+        </svg>
     )
 }
 
