@@ -74,7 +74,7 @@ def next_bot_response(state, action, context):
         color = action["id"]
         if amount == "BA5":
             return VISIT_DU_ASAP
-        elif color == "BC4" or amount in ("BA4", "BA5"):
+        elif color == "BC4" or amount in ("BA3", "BA4"):
             return VISIT_DU
         elif amount == "BA2":
             return REST_AND_CONTACT_DU
