@@ -6,5 +6,6 @@ import { RootState } from "../state/root-state";
 
 export function rootReducer(state: RootState|undefined, action: ReducibleAction): RootState {
   return {
+    
   }
 }
