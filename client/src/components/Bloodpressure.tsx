@@ -1,8 +1,11 @@
 import * as d3 from "d3";
 import React from "react";
+import { ItemEntry } from '../redux/state/root-state';
 
-interface Props {};
-
+interface Props {
+    entries: ItemEntry[],
+    timerange: number[]
+};
 
 const BloodPressure: React.FC<Props> = () =>{
     return (

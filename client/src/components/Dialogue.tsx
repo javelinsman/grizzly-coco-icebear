@@ -7,14 +7,10 @@ interface Props {
     timerange: number[]
 };
 
-const Excercise: React.FC<Props> = () =>{
-
-
-    
-
+const Dialogue: React.FC<Props> = () =>{
     return (
-        <h1> Excercise </h1>
+        <h1> Dialogue </h1>
     )
 }
 
-export default Excercise;
+export default Dialogue;

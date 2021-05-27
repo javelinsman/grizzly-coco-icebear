@@ -1,0 +1,1078 @@
+﻿[
+  {
+    "date": "2021-02-12T03:27:40+09:00",
+    "mclass": "dialogue",
+    "record": {
+      "symptoms": [
+        "태동 감소",
+        "20분 동안 1회 이상의 작은 움직임이 감지되었다"
+      ],
+      "freeform": "별로",
+      "dx": "정상입니다. 시간이 좀 더 흐른 뒤 태동을 다시 느껴보고 평가해주세요."
+    },
+    "patientId": "MSC000005"
+  },
+  {
+    "date": "2021-02-12T14:05:22+09:00",
+    "mclass": "dialogue",
+    "record": {
+      "symptoms": [
+        "질출혈",
+        "500원짜리 동전만큼",
+        "갈색"
+      ],
+      "freeform": "아파요",
+      "dx": "잠시 안정을 취하고, 다시 반복되면 분만장에 문의해보세요."
+    },
+    "patientId": "MSC000005"
+  },
+  {
+    "date": "2021-02-14T02:19:33+09:00",
+    "mclass": "dialogue",
+    "record": {
+      "symptoms": [
+        "태동 감소",
+        "20분 동안 1회의 작은 움직임도 없었다",
+        "네, 느껴졌습니다."
+      ],
+      "freeform": "모르겠어요",
+      "dx": "정상입니다. 시간이 좀 더 흐른 뒤 태동을 다시 느껴보고 평가해주세요."
+    },
+    "patientId": "MSC000005"
+  },
+  {
+    "date": "2021-02-15T05:52:11+09:00",
+    "mclass": "dialogue",
+    "record": {
+      "symptoms": [
+        "기타"
+      ],
+      "freeform": "별로",
+      "dx": null
+    },
+    "patientId": "MSC000005"
+  },
+  {
+    "date": "2021-02-17T07:10:03+09:00",
+    "mclass": "dialogue",
+    "record": {
+      "symptoms": [
+        "질출혈",
+        "살짝 묻어나온 정도",
+        "핑크색"
+      ],
+      "freeform": "괜찮아요",
+      "dx": "안정을 취하고 좀 더 지켜봐주세요."
+    },
+    "patientId": "MSC000005"
+  },
+  {
+    "date": "2021-02-18T08:26:09+09:00",
+    "mclass": "dialogue",
+    "record": {
+      "symptoms": [
+        "자궁수축 / 복통",
+        "오른쪽배",
+        "콕콕 찌르는 양상"
+      ],
+      "freeform": "괜찮아요",
+      "dx": "임신 중 자연스러운 현상입니다. 좀 더 지켜봐주세요."
+    },
+    "patientId": "MSC000005"
+  },
+  {
+    "date": "2021-02-20T21:43:02+09:00",
+    "mclass": "dialogue",
+    "record": {
+      "symptoms": [
+        "자궁수축 / 복통",
+        "오른쪽배",
+        "허리를 못 펼 정도의 아픔"
+      ],
+      "freeform": "모르겠어요",
+      "dx": "분만장으로 내원해주세요."
+    },
+    "patientId": "MSC000005"
+  },
+  {
+    "date": "2021-02-23T10:20:03+09:00",
+    "mclass": "dialogue",
+    "record": {
+      "symptoms": [
+        "입덧",
+        "약간 메스껍다"
+      ],
+      "freeform": "설명이 더 필요해요",
+      "dx": "차가운 음료나 자극적이지 않은 음식 위주로 식사를 시도해보세요."
+    },
+    "patientId": "MSC000005"
+  },
+  {
+    "date": "2021-02-23T21:15:23+09:00",
+    "mclass": "dialogue",
+    "record": {
+      "symptoms": [
+        "질출혈",
+        "손바닥만큼",
+        "빨간색"
+      ],
+      "freeform": "괜찮아요",
+      "dx": "분만장으로 내원해주세요."
+    },
+    "patientId": "MSC000005"
+  },
+  {
+    "date": "2021-02-26T03:08:38+09:00",
+    "mclass": "dialogue",
+    "record": {
+      "symptoms": [
+        "자궁수축 / 복통",
+        "오른쪽배",
+        "쥐어짜듯이 아픔"
+      ],
+      "freeform": "모르겠어요",
+      "dx": "분만장으로 내원해주세요."
+    },
+    "patientId": "MSC000005"
+  },
+  {
+    "date": "2021-02-27T03:20:52+09:00",
+    "mclass": "dialogue",
+    "record": {
+      "symptoms": [
+        "시야장애, 두통, 어지러움, 열, 오한, 호흡곤란"
+      ],
+      "freeform": "모르겠어요",
+      "dx": "분만장으로 내원해주세요."
+    },
+    "patientId": "MSC000005"
+  },
+  {
+    "date": "2021-02-27T12:02:24+09:00",
+    "mclass": "dialogue",
+    "record": {
+      "symptoms": [
+        "질출혈",
+        "살짝 묻어나온 정도",
+        "핑크색"
+      ],
+      "freeform": "설명이 더 필요해요",
+      "dx": "안정을 취하고 좀 더 지켜봐주세요."
+    },
+    "patientId": "MSC000005"
+  },
+  {
+    "date": "2021-02-28T00:53:53+09:00",
+    "mclass": "dialogue",
+    "record": {
+      "symptoms": [
+        "질분비물",
+        "투명한 색의 콧물같은 분비물이 나왔다"
+      ],
+      "freeform": "설명이 더 필요해요",
+      "dx": "임신 중 자연스러운 현상입니다. 좀 더 지켜봐주세요."
+    },
+    "patientId": "MSC000005"
+  },
+  {
+    "date": "2021-03-01T21:16:41+09:00",
+    "mclass": "dialogue",
+    "record": {
+      "symptoms": [
+        "자궁수축 / 복통",
+        "윗배"
+      ],
+      "freeform": "설명이 더 필요해요",
+      "dx": "체하거나 소화와 관련된 증상일 수 있습니다. 임신중독증에서는 간기능이상으로 인한 것이기도 합니다. 분만장에 문의해보세요."
+    },
+    "patientId": "MSC000005"
+  },
+  {
+    "date": "2021-03-07T04:04:34+09:00",
+    "mclass": "dialogue",
+    "record": {
+      "symptoms": [
+        "질출혈",
+        "500원짜리 동전만큼",
+        "옅은 갈색"
+      ],
+      "freeform": "설명이 더 필요해요",
+      "dx": "잠시 안정을 취하고, 다시 반복되면 분만장에 문의해보세요."
+    },
+    "patientId": "MSC000005"
+  },
+  {
+    "date": "2021-03-09T17:55:04+09:00",
+    "mclass": "dialogue",
+    "record": {
+      "symptoms": [
+        "시야장애, 두통, 어지러움, 열, 오한, 호흡곤란"
+      ],
+      "freeform": null,
+      "dx": "분만장으로 내원해주세요."
+    },
+    "patientId": "MSC000005"
+  },
+  {
+    "date": "2021-03-13T17:36:06+09:00",
+    "mclass": "dialogue",
+    "record": {
+      "symptoms": [
+        "시야장애, 두통, 어지러움, 열, 오한, 호흡곤란"
+      ],
+      "freeform": "괜찮아요",
+      "dx": "분만장으로 내원해주세요."
+    },
+    "patientId": "MSC000005"
+  },
+  {
+    "date": "2021-03-16T16:01:22+09:00",
+    "mclass": "dialogue",
+    "record": {
+      "symptoms": [
+        "자궁수축 / 복통",
+        "윗배"
+      ],
+      "freeform": "별로",
+      "dx": "체하거나 소화와 관련된 증상일 수 있습니다. 임신중독증에서는 간기능이상으로 인한 것이기도 합니다. 분만장에 문의해보세요."
+    },
+    "patientId": "MSC000005"
+  },
+  {
+    "date": "2021-03-17T08:22:30+09:00",
+    "mclass": "dialogue",
+    "record": {
+      "symptoms": [
+        "자궁수축 / 복통",
+        "오른쪽배",
+        "쥐어짜듯이 아픔"
+      ],
+      "freeform": "설명이 더 필요해요",
+      "dx": "분만장으로 내원해주세요."
+    },
+    "patientId": "MSC000005"
+  },
+  {
+    "date": "2021-03-17T11:49:55+09:00",
+    "mclass": "dialogue",
+    "record": {
+      "symptoms": [
+        "입덧",
+        "어지럽다"
+      ],
+      "freeform": null,
+      "dx": "산부인과 진료 예약을 당겨서 내원해주세요."
+    },
+    "patientId": "MSC000005"
+  },
+  {
+    "date": "2021-02-09T20:31:12+09:00",
+    "mclass": "혈압",
+    "record": [
+      {
+        "diastolic": 94,
+        "heartrate": 79,
+        "systolic": 154
+      }
+    ],
+    "patientId": "MSC000005"
+  },
+  {
+    "date": "2021-02-13T16:47:49+09:00",
+    "mclass": "혈압",
+    "record": [
+      {
+        "diastolic": 87,
+        "heartrate": 82,
+        "systolic": 153
+      }
+    ],
+    "patientId": "MSC000005"
+  },
+  {
+    "date": "2021-02-16T01:00:13+09:00",
+    "mclass": "혈압",
+    "record": [
+      {
+        "diastolic": 94,
+        "heartrate": 88,
+        "systolic": 165
+      }
+    ],
+    "patientId": "MSC000005"
+  },
+  {
+    "date": "2021-02-16T05:30:16+09:00",
+    "mclass": "혈압",
+    "record": [
+      {
+        "diastolic": 82,
+        "heartrate": 89,
+        "systolic": 150
+      }
+    ],
+    "patientId": "MSC000005"
+  },
+  {
+    "date": "2021-02-16T06:52:35+09:00",
+    "mclass": "혈압",
+    "record": [
+      {
+        "diastolic": 100,
+        "heartrate": 83,
+        "systolic": 150
+      }
+    ],
+    "patientId": "MSC000005"
+  },
+  {
+    "date": "2021-02-20T14:40:59+09:00",
+    "mclass": "혈압",
+    "record": [
+      {
+        "diastolic": 96,
+        "heartrate": 86,
+        "systolic": 164
+      }
+    ],
+    "patientId": "MSC000005"
+  },
+  {
+    "date": "2021-02-22T05:25:57+09:00",
+    "mclass": "혈압",
+    "record": [
+      {
+        "diastolic": 94,
+        "heartrate": 88,
+        "systolic": 152
+      }
+    ],
+    "patientId": "MSC000005"
+  },
+  {
+    "date": "2021-02-22T22:10:29+09:00",
+    "mclass": "혈압",
+    "record": [
+      {
+        "diastolic": 99,
+        "heartrate": 84,
+        "systolic": 154
+      }
+    ],
+    "patientId": "MSC000005"
+  },
+  {
+    "date": "2021-02-23T04:55:42+09:00",
+    "mclass": "혈압",
+    "record": [
+      {
+        "diastolic": 97,
+        "heartrate": 85,
+        "systolic": 157
+      }
+    ],
+    "patientId": "MSC000005"
+  },
+  {
+    "date": "2021-02-24T19:20:27+09:00",
+    "mclass": "혈압",
+    "record": [
+      {
+        "diastolic": 92,
+        "heartrate": 86,
+        "systolic": 162
+      }
+    ],
+    "patientId": "MSC000005"
+  },
+  {
+    "date": "2021-02-27T08:17:45+09:00",
+    "mclass": "혈압",
+    "record": [
+      {
+        "diastolic": 97,
+        "heartrate": 87,
+        "systolic": 157
+      }
+    ],
+    "patientId": "MSC000005"
+  },
+  {
+    "date": "2021-02-28T09:53:51+09:00",
+    "mclass": "혈압",
+    "record": [
+      {
+        "diastolic": 99,
+        "heartrate": 85,
+        "systolic": 151
+      }
+    ],
+    "patientId": "MSC000005"
+  },
+  {
+    "date": "2021-02-28T22:11:05+09:00",
+    "mclass": "혈압",
+    "record": [
+      {
+        "diastolic": 97,
+        "heartrate": 88,
+        "systolic": 154
+      }
+    ],
+    "patientId": "MSC000005"
+  },
+  {
+    "date": "2021-03-01T13:48:37+09:00",
+    "mclass": "혈압",
+    "record": [
+      {
+        "diastolic": 105,
+        "heartrate": 81,
+        "systolic": 148
+      }
+    ],
+    "patientId": "MSC000005"
+  },
+  {
+    "date": "2021-03-02T15:24:28+09:00",
+    "mclass": "혈압",
+    "record": [
+      {
+        "diastolic": 93,
+        "heartrate": 88,
+        "systolic": 159
+      }
+    ],
+    "patientId": "MSC000005"
+  },
+  {
+    "date": "2021-03-05T23:32:56+09:00",
+    "mclass": "혈압",
+    "record": [
+      {
+        "diastolic": 97,
+        "heartrate": 84,
+        "systolic": 153
+      }
+    ],
+    "patientId": "MSC000005"
+  },
+  {
+    "date": "2021-03-06T20:54:33+09:00",
+    "mclass": "혈압",
+    "record": [
+      {
+        "diastolic": 103,
+        "heartrate": 83,
+        "systolic": 158
+      }
+    ],
+    "patientId": "MSC000005"
+  },
+  {
+    "date": "2021-03-07T08:02:32+09:00",
+    "mclass": "혈압",
+    "record": [
+      {
+        "diastolic": 96,
+        "heartrate": 80,
+        "systolic": 162
+      }
+    ],
+    "patientId": "MSC000005"
+  },
+  {
+    "date": "2021-03-07T20:25:24+09:00",
+    "mclass": "혈압",
+    "record": [
+      {
+        "diastolic": 97,
+        "heartrate": 84,
+        "systolic": 158
+      }
+    ],
+    "patientId": "MSC000005"
+  },
+  {
+    "date": "2021-03-08T18:56:33+09:00",
+    "mclass": "혈압",
+    "record": [
+      {
+        "diastolic": 105,
+        "heartrate": 85,
+        "systolic": 152
+      }
+    ],
+    "patientId": "MSC000005"
+  },
+  {
+    "date": "2021-03-10T08:17:25+09:00",
+    "mclass": "혈압",
+    "record": [
+      {
+        "diastolic": 63,
+        "heartrate": 84,
+        "systolic": 132
+      }
+    ],
+    "patientId": "MSC000005"
+  },
+  {
+    "date": "2021-03-12T06:59:27+09:00",
+    "mclass": "혈압",
+    "record": [
+      {
+        "diastolic": 81,
+        "heartrate": 84,
+        "systolic": 142
+      }
+    ],
+    "patientId": "MSC000005"
+  },
+  {
+    "date": "2021-03-12T11:41:53+09:00",
+    "mclass": "혈압",
+    "record": [
+      {
+        "diastolic": 63,
+        "heartrate": 86,
+        "systolic": 139
+      }
+    ],
+    "patientId": "MSC000005"
+  },
+  {
+    "date": "2021-03-12T19:36:03+09:00",
+    "mclass": "혈압",
+    "record": [
+      {
+        "diastolic": 71,
+        "heartrate": 87,
+        "systolic": 144
+      }
+    ],
+    "patientId": "MSC000005"
+  },
+  {
+    "date": "2021-03-13T00:49:52+09:00",
+    "mclass": "혈압",
+    "record": [
+      {
+        "diastolic": 76,
+        "heartrate": 83,
+        "systolic": 148
+      }
+    ],
+    "patientId": "MSC000005"
+  },
+  {
+    "date": "2021-03-13T01:31:38+09:00",
+    "mclass": "혈압",
+    "record": [
+      {
+        "diastolic": 100,
+        "heartrate": 84,
+        "systolic": 180
+      }
+    ],
+    "patientId": "MSC000005"
+  },
+  {
+    "date": "2021-03-13T17:18:42+09:00",
+    "mclass": "혈압",
+    "record": [
+      {
+        "diastolic": 107,
+        "heartrate": 82,
+        "systolic": 178
+      }
+    ],
+    "patientId": "MSC000005"
+  },
+  {
+    "date": "2021-03-14T00:18:29+09:00",
+    "mclass": "혈압",
+    "record": [
+      {
+        "diastolic": 84,
+        "heartrate": 82,
+        "systolic": 153
+      }
+    ],
+    "patientId": "MSC000005"
+  },
+  {
+    "date": "2021-03-17T11:56:25+09:00",
+    "mclass": "혈압",
+    "record": [
+      {
+        "diastolic": 84,
+        "heartrate": 82,
+        "systolic": 144
+      }
+    ],
+    "patientId": "MSC000005"
+  },
+  {
+    "date": "2021-03-18T19:26:02+09:00",
+    "mclass": "혈압",
+    "record": [
+      {
+        "diastolic": 91,
+        "heartrate": 89,
+        "systolic": 161
+      }
+    ],
+    "patientId": "MSC000005"
+  },
+  {
+    "date": "2021-02-15T23:24:05+09:00",
+    "mclass": "체중",
+    "record": {
+      "unit": "kg",
+      "weight": 75
+    },
+    "patientId": "MSC000005"
+  },
+  {
+    "date": "2021-02-19T13:45:54+09:00",
+    "mclass": "체중",
+    "record": {
+      "unit": "kg",
+      "weight": 75.41
+    },
+    "patientId": "MSC000005"
+  },
+  {
+    "date": "2021-02-21T14:33:29+09:00",
+    "mclass": "체중",
+    "record": {
+      "unit": "kg",
+      "weight": 75.62
+    },
+    "patientId": "MSC000005"
+  },
+  {
+    "date": "2021-02-22T12:30:16+09:00",
+    "mclass": "체중",
+    "record": {
+      "unit": "kg",
+      "weight": 75.7
+    },
+    "patientId": "MSC000005"
+  },
+  {
+    "date": "2021-02-28T21:42:56+09:00",
+    "mclass": "체중",
+    "record": {
+      "unit": "kg",
+      "weight": 76.26
+    },
+    "patientId": "MSC000005"
+  },
+  {
+    "date": "2021-03-01T09:12:10+09:00",
+    "mclass": "체중",
+    "record": {
+      "unit": "kg",
+      "weight": 76.31
+    },
+    "patientId": "MSC000005"
+  },
+  {
+    "date": "2021-03-06T17:50:37+09:00",
+    "mclass": "체중",
+    "record": {
+      "unit": "kg",
+      "weight": 76.81
+    },
+    "patientId": "MSC000005"
+  },
+  {
+    "date": "2021-03-10T00:31:19+09:00",
+    "mclass": "체중",
+    "record": {
+      "unit": "kg",
+      "weight": 77.11
+    },
+    "patientId": "MSC000005"
+  },
+  {
+    "date": "2021-03-15T05:33:56+09:00",
+    "mclass": "체중",
+    "record": {
+      "unit": "kg",
+      "weight": 77.66
+    },
+    "patientId": "MSC000005"
+  },
+  {
+    "date": "2021-03-19T13:34:46+09:00",
+    "mclass": "체중",
+    "record": {
+      "unit": "kg",
+      "weight": 78.06
+    },
+    "patientId": "MSC000005"
+  },
+  {
+    "date": "2021-02-12T04:16:22+09:00",
+    "mclass": "운동",
+    "record": {
+      "name": "자전거",
+      "time": 30
+    },
+    "patientId": "MSC000005"
+  },
+  {
+    "date": "2021-02-12T09:37:29+09:00",
+    "mclass": "운동",
+    "record": {
+      "name": "걷기",
+      "time": 50
+    },
+    "patientId": "MSC000005"
+  },
+  {
+    "date": "2021-02-18T16:58:54+09:00",
+    "mclass": "운동",
+    "record": {
+      "name": "요가",
+      "time": 40
+    },
+    "patientId": "MSC000005"
+  },
+  {
+    "date": "2021-02-25T16:38:29+09:00",
+    "mclass": "운동",
+    "record": {
+      "name": "걷기",
+      "time": 105
+    },
+    "patientId": "MSC000005"
+  },
+  {
+    "date": "2021-03-05T13:29:37+09:00",
+    "mclass": "운동",
+    "record": {
+      "name": "걷기",
+      "time": 40
+    },
+    "patientId": "MSC000005"
+  },
+  {
+    "date": "2021-03-07T00:24:43+09:00",
+    "mclass": "운동",
+    "record": {
+      "name": "조깅",
+      "time": 100
+    },
+    "patientId": "MSC000005"
+  },
+  {
+    "date": "2021-03-09T06:30:39+09:00",
+    "mclass": "운동",
+    "record": {
+      "name": "조깅",
+      "time": 60
+    },
+    "patientId": "MSC000005"
+  },
+  {
+    "date": "2021-03-15T16:36:54+09:00",
+    "mclass": "운동",
+    "record": {
+      "name": "걷기",
+      "time": 45
+    },
+    "patientId": "MSC000005"
+  },
+  {
+    "date": "2021-03-17T04:34:40+09:00",
+    "mclass": "운동",
+    "record": {
+      "name": "조깅",
+      "time": 120
+    },
+    "patientId": "MSC000005"
+  },
+  {
+    "date": "2021-03-18T08:51:50+09:00",
+    "mclass": "운동",
+    "record": {
+      "name": "수영",
+      "time": 50
+    },
+    "patientId": "MSC000005"
+  },
+  {
+    "date": "2021-02-09T22:45:25+09:00",
+    "mclass": "혈당",
+    "record": {
+      "beforeOrAfter": "before",
+      "bloodSugar": 68
+    },
+    "patientId": "MSC000005"
+  },
+  {
+    "date": "2021-02-10T09:59:44+09:00",
+    "mclass": "혈당",
+    "record": {
+      "beforeOrAfter": "before",
+      "bloodSugar": 70
+    },
+    "patientId": "MSC000005"
+  },
+  {
+    "date": "2021-02-11T08:35:12+09:00",
+    "mclass": "혈당",
+    "record": {
+      "beforeOrAfter": "after",
+      "bloodSugar": 118
+    },
+    "patientId": "MSC000005"
+  },
+  {
+    "date": "2021-02-13T04:02:19+09:00",
+    "mclass": "혈당",
+    "record": {
+      "beforeOrAfter": "before",
+      "bloodSugar": 84
+    },
+    "patientId": "MSC000005"
+  },
+  {
+    "date": "2021-02-14T22:25:41+09:00",
+    "mclass": "혈당",
+    "record": {
+      "beforeOrAfter": "after",
+      "bloodSugar": 119
+    },
+    "patientId": "MSC000005"
+  },
+  {
+    "date": "2021-02-15T07:49:35+09:00",
+    "mclass": "혈당",
+    "record": {
+      "beforeOrAfter": "after",
+      "bloodSugar": 132
+    },
+    "patientId": "MSC000005"
+  },
+  {
+    "date": "2021-02-16T10:33:38+09:00",
+    "mclass": "혈당",
+    "record": {
+      "beforeOrAfter": "after",
+      "bloodSugar": 129
+    },
+    "patientId": "MSC000005"
+  },
+  {
+    "date": "2021-02-16T17:48:12+09:00",
+    "mclass": "혈당",
+    "record": {
+      "beforeOrAfter": "after",
+      "bloodSugar": 117
+    },
+    "patientId": "MSC000005"
+  },
+  {
+    "date": "2021-02-18T00:12:11+09:00",
+    "mclass": "혈당",
+    "record": {
+      "beforeOrAfter": "after",
+      "bloodSugar": 91
+    },
+    "patientId": "MSC000005"
+  },
+  {
+    "date": "2021-02-18T10:13:14+09:00",
+    "mclass": "혈당",
+    "record": {
+      "beforeOrAfter": "before",
+      "bloodSugar": 98
+    },
+    "patientId": "MSC000005"
+  },
+  {
+    "date": "2021-02-18T11:56:12+09:00",
+    "mclass": "혈당",
+    "record": {
+      "beforeOrAfter": "before",
+      "bloodSugar": 61
+    },
+    "patientId": "MSC000005"
+  },
+  {
+    "date": "2021-02-20T09:06:58+09:00",
+    "mclass": "혈당",
+    "record": {
+      "beforeOrAfter": "after",
+      "bloodSugar": 118
+    },
+    "patientId": "MSC000005"
+  },
+  {
+    "date": "2021-02-20T23:12:00+09:00",
+    "mclass": "혈당",
+    "record": {
+      "beforeOrAfter": "before",
+      "bloodSugar": 99
+    },
+    "patientId": "MSC000005"
+  },
+  {
+    "date": "2021-02-22T17:24:49+09:00",
+    "mclass": "혈당",
+    "record": {
+      "beforeOrAfter": "after",
+      "bloodSugar": 119
+    },
+    "patientId": "MSC000005"
+  },
+  {
+    "date": "2021-02-26T14:09:02+09:00",
+    "mclass": "혈당",
+    "record": {
+      "beforeOrAfter": "after",
+      "bloodSugar": 96
+    },
+    "patientId": "MSC000005"
+  },
+  {
+    "date": "2021-02-26T20:06:40+09:00",
+    "mclass": "혈당",
+    "record": {
+      "beforeOrAfter": "after",
+      "bloodSugar": 86
+    },
+    "patientId": "MSC000005"
+  },
+  {
+    "date": "2021-02-27T13:33:59+09:00",
+    "mclass": "혈당",
+    "record": {
+      "beforeOrAfter": "before",
+      "bloodSugar": 68
+    },
+    "patientId": "MSC000005"
+  },
+  {
+    "date": "2021-03-02T05:31:27+09:00",
+    "mclass": "혈당",
+    "record": {
+      "beforeOrAfter": "after",
+      "bloodSugar": 122
+    },
+    "patientId": "MSC000005"
+  },
+  {
+    "date": "2021-03-02T07:53:27+09:00",
+    "mclass": "혈당",
+    "record": {
+      "beforeOrAfter": "after",
+      "bloodSugar": 105
+    },
+    "patientId": "MSC000005"
+  },
+  {
+    "date": "2021-03-03T09:39:32+09:00",
+    "mclass": "혈당",
+    "record": {
+      "beforeOrAfter": "before",
+      "bloodSugar": 79
+    },
+    "patientId": "MSC000005"
+  },
+  {
+    "date": "2021-03-03T21:21:02+09:00",
+    "mclass": "혈당",
+    "record": {
+      "beforeOrAfter": "before",
+      "bloodSugar": 71
+    },
+    "patientId": "MSC000005"
+  },
+  {
+    "date": "2021-03-06T08:23:36+09:00",
+    "mclass": "혈당",
+    "record": {
+      "beforeOrAfter": "after",
+      "bloodSugar": 114
+    },
+    "patientId": "MSC000005"
+  },
+  {
+    "date": "2021-03-07T02:44:37+09:00",
+    "mclass": "혈당",
+    "record": {
+      "beforeOrAfter": "before",
+      "bloodSugar": 75
+    },
+    "patientId": "MSC000005"
+  },
+  {
+    "date": "2021-03-07T10:55:10+09:00",
+    "mclass": "혈당",
+    "record": {
+      "beforeOrAfter": "before",
+      "bloodSugar": 73
+    },
+    "patientId": "MSC000005"
+  },
+  {
+    "date": "2021-03-07T20:10:53+09:00",
+    "mclass": "혈당",
+    "record": {
+      "beforeOrAfter": "before",
+      "bloodSugar": 81
+    },
+    "patientId": "MSC000005"
+  },
+  {
+    "date": "2021-03-09T02:18:44+09:00",
+    "mclass": "혈당",
+    "record": {
+      "beforeOrAfter": "before",
+      "bloodSugar": 86
+    },
+    "patientId": "MSC000005"
+  },
+  {
+    "date": "2021-03-10T15:19:03+09:00",
+    "mclass": "혈당",
+    "record": {
+      "beforeOrAfter": "after",
+      "bloodSugar": 104
+    },
+    "patientId": "MSC000005"
+  },
+  {
+    "date": "2021-03-11T04:28:03+09:00",
+    "mclass": "혈당",
+    "record": {
+      "beforeOrAfter": "before",
+      "bloodSugar": 85
+    },
+    "patientId": "MSC000005"
+  },
+  {
+    "date": "2021-03-12T06:03:17+09:00",
+    "mclass": "혈당",
+    "record": {
+      "beforeOrAfter": "after",
+      "bloodSugar": 98
+    },
+    "patientId": "MSC000005"
+  },
+  {
+    "date": "2021-03-17T17:05:16+09:00",
+    "mclass": "혈당",
+    "record": {
+      "beforeOrAfter": "after",
+      "bloodSugar": 127
+    },
+    "patientId": "MSC000005"
+  }
+]
