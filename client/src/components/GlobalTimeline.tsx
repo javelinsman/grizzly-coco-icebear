@@ -2,7 +2,7 @@ import * as d3 from 'd3'
 import { Dxc } from 'grommet-icons'
 import React, { useLayoutEffect, useState, useRef, DOMElement } from 'react'
 import { ItemEntry } from '../redux/state/root-state'
-import abnormalChecker from '../utils/abnormalChecker';
+import abnormalChecker from '../utils/abnormalChecker'
 
 interface Props {
   entries: ItemEntry[]
@@ -23,7 +23,7 @@ const GlobalTimeline: React.FC<Props> = ({
   const width = svgWidth - padding.left - padding.right
   const height = svgHeight - padding.top - padding.left
 
-  const boxWidth = 3;
+  const boxWidth = 3
   const boxHeight = 30
 
   const domains: string[] = ['혈압', '혈당', '체중', '운동', 'dialogue']
@@ -39,10 +39,7 @@ const GlobalTimeline: React.FC<Props> = ({
     return d3.schemeTableau10[domains.indexOf(ie.mclass)]
   }
 
-  const x = d3
-    .scaleTime()
-    .domain(timerange)
-    .range([0, width])
+  const x = d3.scaleTime().domain(timerange).range([0, width])
 
   const y = d3.scaleBand().domain(domains).range([0, height])
 
@@ -53,13 +50,28 @@ const GlobalTimeline: React.FC<Props> = ({
 
   useLayoutEffect(() => {
     if (gXAxis.current) {
-      d3.select(gXAxis.current).call(xAxis);
+      d3.select(gXAxis.current).call(xAxis)
     }
     if (gYAxis.current) {
-      d3.select(gYAxis.current).call(yAxis);
+      d3.select(gYAxis.current).call(yAxis)
     }
+    //d3.select('#fig')
+    //  .append('g')
+    //  .call(brush)
+    //  .call(brush.move, [
+    //    [0, 0],
+    //    [width, height],
+    //  ])
   })
 
+  const brush = d3
+    .brushX()
+    .extent([
+      [0, 0],
+      [width, height],
+    ])
+    .on('brush', null)
+    .on('end', null)
 
   return (
     <svg
@@ -79,7 +91,7 @@ const GlobalTimeline: React.FC<Props> = ({
               x2={width}
               y2={i * boxHeight}
               stroke={'black'}
-              stroke-width={1}
+              strokeWidth={1}
             ></line>
           )
         })}
@@ -91,8 +103,8 @@ const GlobalTimeline: React.FC<Props> = ({
               y={y(d.mclass)}
               width={boxWidth}
               height={boxHeight}
-              fill = {color(d)}
-              opacity = {abnormalChecker(d)? 1: 0.2}
+              fill={color(d)}
+              opacity={abnormalChecker(d) ? 1 : 0.2}
             ></rect>
           )
         })}
