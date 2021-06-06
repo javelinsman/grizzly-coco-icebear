@@ -1,6 +1,7 @@
 import openpyxl
 import json
 import os
+import re
 
 nicknames = [
         'iliiiillllliii', #P0, 83
@@ -45,7 +46,7 @@ if __name__ == "__main__" :
         print(pid, ': ', nickname)
         target_list = [f for f in file_list if pid in f]
 
-
+        index = 2
         for aid, target in enumerate(target_list) :
             with open(data_path+target) as json_file:
                 json_data = json.load(json_file)
@@ -53,14 +54,19 @@ if __name__ == "__main__" :
                 sentences = json_data['contents']
 
                 #print(json_data)
-                # pid: pid
-                ws['A'+str(aid+2)] = pid
-                # aid: aid
-                ws['B'+str(aid+2)] = aid
+                
                 # sid: sid
                 for sid, sentence in enumerate(sentences) :
-                    ws['C'+str(aid+2)] = sid
-                    ws['D'+str(aid+2)] = sentence
+                    # pid: pid
+                    v_sentence = sentence.replace("\u200B", "").strip()
+                    if v_sentence != '' and v_sentence != '\n' :
+                        #print(v_sentence)
+                        ws['A'+str(index)] = pid
+                        # aid: aid
+                        ws['B'+str(index)] = aid
+                        ws['C'+str(index)] = sid
+                        ws['D'+str(index)] = v_sentence
+                        index += 1
 
     wb.save(filename=xl_filename)
 
