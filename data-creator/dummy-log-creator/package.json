@@ -1,0 +1,7 @@
+{
+  "dependencies": {
+    "csv-parse": "^4.15.4",
+    "csv-parser": "^3.0.0",
+    "d3-random": "^2.2.2"
+  }
+}
