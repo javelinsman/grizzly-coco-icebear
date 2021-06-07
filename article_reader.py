@@ -30,6 +30,7 @@ nicknames = [
         ]
 data_path = "./data/"
 xl_filename = "./articles.xlsx"
+skip_words = ["", "\u200B", "\n"]
 
 if __name__ == "__main__" :
     print('start')
@@ -37,16 +38,18 @@ if __name__ == "__main__" :
     file_list = os.listdir(data_path)
     # output excel file
     wb = openpyxl.load_workbook(filename=xl_filename)
+    ws = wb.active
+    index = 2
 
     for i in range(23) :
         pid = 'P'+str(i)
         nickname = nicknames[i]
         # create sheet
-        ws = wb.create_sheet(nickname)
+        
         print(pid, ': ', nickname)
         target_list = [f for f in file_list if pid in f]
 
-        index = 2
+        
         for aid, target in enumerate(target_list) :
             with open(data_path+target) as json_file:
                 json_data = json.load(json_file)
@@ -54,19 +57,30 @@ if __name__ == "__main__" :
                 sentences = json_data['contents']
 
                 #print(json_data)
+                # title
+                ws['A'+str(index)] = pid
+                # aid: aid
+                ws['B'+str(index)] = aid
+                ws['C'+str(index)] = 0
+                ws['D'+str(index)] = json_data['title']
+
+                index += 1
                 
                 # sid: sid
-                for sid, sentence in enumerate(sentences) :
-                    # pid: pid
-                    v_sentence = sentence.replace("\u200B", "").strip()
-                    if v_sentence != '' and v_sentence != '\n' :
+                v_sentences = [s.strip() for s in sentences if s not in skip_words]
+
+                if v_sentences :
+                    for sid, v_sentence in enumerate(v_sentences) :
+                        # pid: pid
                         #print(v_sentence)
                         ws['A'+str(index)] = pid
                         # aid: aid
                         ws['B'+str(index)] = aid
-                        ws['C'+str(index)] = sid
+                        ws['C'+str(index)] = sid + 1
                         ws['D'+str(index)] = v_sentence
                         index += 1
+
+               
 
     wb.save(filename=xl_filename)
 
